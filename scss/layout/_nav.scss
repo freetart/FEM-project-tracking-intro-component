@@ -15,6 +15,10 @@
 
   &__logo {
     width: 5rem;
+
+    @include responsive(lg) {
+      width: 2.5rem;
+    }
   }
 
   &__links {
