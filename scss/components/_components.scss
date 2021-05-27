@@ -1,2 +1,15 @@
 // imports
 @use "../abstracts/abstracts" as *;
+
+// buttons
+.btn {
+  @include headingStyles;
+  padding: 1.5rem 2rem;
+  font-size: size(sm);
+  border-radius: 0.5rem;
+
+  &--primary {
+    background-color: color(red);
+    color: color(white);
+  }
+}
