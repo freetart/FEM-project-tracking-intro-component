@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Frontend Mentor Project Tracking Intro Component</title>
@@ -20,7 +22,7 @@
     </div>
 
     <!-- bg pattern -->
-    <div class="bg-circle"></div>
+    <div class="bg-circle" data-aos="fade-down"></div>
 
     <!-- nav -->
     <nav class="nav">
@@ -81,7 +83,7 @@
     <!-- hero -->
     <header class="hero">
       <div class="hero__content">
-        <div class="hero__info">
+        <div class="hero__info" data-aos="fade-right">
           <h5 class="hero__lead">
             <span class="hero__tag">New</span> Monograph Dashboard
           </h5>
@@ -94,7 +96,7 @@
             <div class="hero__cta-desc">to see a live preview</div>
           </div>
         </div>
-        <div class="hero__img">
+        <div class="hero__img" data-aos="fade-left">
           <img
             src="./images/illustration-devices.svg"
             alt="illustration devices"
@@ -131,6 +133,13 @@
       />
     </footer>
 
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 100, duration: 1000, once: true });
+    </script>
+
+    <!-- js -->
     <script src="./js/main.js"></script>
   </body>
 </html>
