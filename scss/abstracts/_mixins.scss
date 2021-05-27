@@ -42,3 +42,12 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+// media queries
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == lg) {
+    @media (max-width: 850px) {
+      @content;
+    }
+  }
+}

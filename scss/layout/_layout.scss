@@ -11,6 +11,23 @@
   clip-path: circle(50% at 86% 11%);
 }
 
+// hamburger icons
+.hamburger {
+  border: 0;
+  background: transparent;
+  display: none;
+
+  @include responsive(lg) {
+    display: block;
+  }
+
+  &__icon {
+    &--close {
+      display: none;
+    }
+  }
+}
+
 // nav
 .nav {
   &__content {
@@ -27,6 +44,10 @@
 
   &__links {
     display: flex;
+
+    @include responsive(lg) {
+      display: none;
+    }
   }
 
   &__link {
@@ -34,6 +55,11 @@
     font-size: size(sm);
     margin: 0 2.5rem;
     color: color(veryDarkBlue);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
 
     &--login {
       padding-left: 6rem;
@@ -55,6 +81,10 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 5rem;
+
+    @include responsive(lg) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__lead {
@@ -102,5 +132,9 @@
 
   &__devices {
     transform: translateX(25%) scale(1.7);
+
+    @include responsive(lg) {
+      transform: scale(1);
+    }
   }
 }

@@ -11,5 +11,16 @@
   &--primary {
     background-color: color(red);
     color: color(white);
+    transition: 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(color(red), 5%);
+    }
   }
+}
+
+// mobile menu
+.mobile-menu {
+  display: none;
 }
