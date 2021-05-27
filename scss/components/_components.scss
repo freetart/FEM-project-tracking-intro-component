@@ -23,4 +23,36 @@
 // mobile menu
 .mobile-menu {
   display: none;
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: color(white);
+  text-align: center;
+  padding: 2rem;
+  width: 50%;
+  box-shadow: -0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+
+  &.active {
+    display: block;
+  }
+
+  &__item {
+    margin: 3rem 0;
+
+    &--login {
+      border-top: 0.1rem solid color(grayishBlue);
+      padding-top: 2rem;
+    }
+  }
+
+  &__link {
+    @include headingStyles;
+    font-size: size(sm);
+    color: color(veryDarkBlue);
+
+    &--login {
+      color: color(grayishBlue);
+    }
+  }
 }

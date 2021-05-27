@@ -22,14 +22,28 @@
   }
 
   &__icon {
+    &--open {
+      &.hide {
+        display: none;
+      }
+    }
+
     &--close {
-      display: none;
+      &.hide {
+        display: none;
+      }
+
+      &.active {
+        display: block;
+      }
     }
   }
 }
 
 // nav
 .nav {
+  position: relative;
+
   &__content {
     @include maxWidthLg;
     @include sectionSpacing;
