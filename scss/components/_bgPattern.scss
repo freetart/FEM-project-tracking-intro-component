@@ -1,0 +1,12 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// bg pattern
+.bg-circle {
+  position: absolute;
+  background-color: color(lightGrayishBlue);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  clip-path: circle(50% at 86% 11%);
+}

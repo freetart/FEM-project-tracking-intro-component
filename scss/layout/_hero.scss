@@ -1,0 +1,77 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// hero
+.hero {
+  min-height: 80vh;
+  overflow-x: hidden;
+
+  &__content {
+    min-height: 80vh;
+    @include maxWidthLg;
+    @include sectionSpacing;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+
+    @include responsive(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__lead {
+    @include textStyles;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: color(grayishBlue);
+    font-size: size(xs);
+    padding-bottom: 2rem;
+  }
+
+  &__tag {
+    background-color: color(black);
+    color: color(white);
+    padding: 0.7rem;
+    border-radius: 1.5rem;
+    letter-spacing: 0.12rem;
+    font-size: size(xxs);
+
+    @include responsive(sm) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: size(xxl) + 4rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: size(md);
+    color: color(grayishBlue);
+    padding: 3rem 0;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+
+    &-desc {
+      @include textStyles;
+      text-transform: uppercase;
+      font-size: size(xs);
+      color: color(grayishBlue);
+      padding-left: 2rem;
+    }
+  }
+
+  &__devices {
+    transform: translateX(25%) scale(1.7);
+
+    @include responsive(lg) {
+      transform: scale(1);
+    }
+  }
+}

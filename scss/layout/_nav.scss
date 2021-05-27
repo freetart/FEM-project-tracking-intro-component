@@ -1,0 +1,44 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// nav
+.nav {
+  position: relative;
+
+  &__content {
+    @include maxWidthLg;
+    @include sectionSpacing;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+
+  &__links {
+    display: flex;
+
+    @include responsive(lg) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include headingStyles;
+    font-size: size(sm);
+    margin: 0 2.5rem;
+    color: color(veryDarkBlue);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &--login {
+      padding-left: 6rem;
+      color: color(darkGrayishBlue);
+    }
+  }
+}

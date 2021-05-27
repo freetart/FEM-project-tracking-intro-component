@@ -1,0 +1,22 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// buttons
+.btn {
+  @include headingStyles;
+  padding: 1.5rem 2rem;
+  font-size: size(sm);
+  border-radius: 0.5rem;
+  text-align: center;
+
+  &--primary {
+    background-color: color(red);
+    color: color(white);
+    transition: 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(color(red), 5%);
+    }
+  }
+}
