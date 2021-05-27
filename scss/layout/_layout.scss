@@ -23,15 +23,15 @@
 
   &__icon {
     &--open {
+      display: block;
+
       &.hide {
         display: none;
       }
     }
 
     &--close {
-      &.hide {
-        display: none;
-      }
+      display: none;
 
       &.active {
         display: block;
@@ -117,6 +117,10 @@
     border-radius: 1.5rem;
     letter-spacing: 0.12rem;
     font-size: size(xxs);
+
+    @include responsive(sm) {
+      display: none;
+    }
   }
 
   &__heading {
